@@ -2,7 +2,6 @@
 //
 //     final yesNoModel = yesNoModelFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 import 'package:yes_no_app/domain/entities/message.dart';

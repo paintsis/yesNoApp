@@ -8,8 +8,11 @@ class ChatProvider extends ChangeNotifier {
   List<Message> messagesList = [];
 
   Future<void> sendMessage(String text) async {
+    if (text.isEmpty) return;
+
     final newMessage = Message(text: text, fromWho: FromWho.me);
     messagesList.add(newMessage);
+
     if (text.endsWith('?')) {
       herRepy();
     }
